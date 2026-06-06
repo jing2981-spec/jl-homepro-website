@@ -141,6 +141,30 @@
     .service p { margin: 0; color: var(--muted); font-size: 14.5px; }
     .service .tag-summer { position: absolute; top: 16px; right: 16px; padding: 4px 10px; border-radius: 999px; background: var(--orange); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.03em; }
 
+    /* ---------- service media ---------- */
+    .service-media { margin: -30px -24px 22px; border-radius: 15px 15px 0 0; overflow: hidden; background: var(--soft); }
+    .service-media img,
+    .service-media video { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .service.featured { grid-column: 1 / -1; text-align: left; }
+    .service.featured .service-media { height: 300px; }
+    .service.featured .service-media .before-after { height: 100%; }
+    .service.featured .service-media .ba-fig img { height: 100%; }
+    .service.featured .service-content { display: grid; grid-template-columns: auto 1fr; gap: 0 16px; align-items: start; margin-top: 4px; }
+    .service.featured .service-content h3 { grid-column: 2; margin-bottom: 8px; }
+    .service.featured .service-content p { grid-column: 2; }
+    .service.featured .ico { grid-row: 1 / 3; }
+
+    /* ---------- faq ---------- */
+    .faq-list { display: grid; gap: 10px; max-width: 820px; margin: 0 auto; }
+    .faq-item { border: 1px solid var(--line); border-radius: 14px; background: var(--paper); overflow: hidden; }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: none; border: none; text-align: left; font-weight: 700; font-size: 16px; cursor: pointer; color: var(--ink); line-height: 1.4; }
+    .faq-q .arrow { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--orange-soft); display: flex; align-items: center; justify-content: center; transition: transform 250ms ease; }
+    .faq-q .arrow svg { width: 12px; height: 12px; stroke: var(--orange); fill: none; stroke-width: 2.5; }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 350ms ease; }
+    .faq-a-inner { padding: 0 24px 20px; color: var(--muted); font-size: 15px; line-height: 1.75; }
+    .faq-item.open .faq-a { max-height: 300px; }
+
     /* ---------- why us ---------- */
     .why-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
     .why-list { display: grid; gap: 18px; margin-top: 28px; }
@@ -269,7 +293,14 @@
       .why-visual { max-height: 460px; }
       .steps { grid-template-columns: repeat(2, 1fr); }
     }
+    @media (max-width: 1000px) {
+      .service.featured .service-media { height: 240px; }
+    }
     @media (max-width: 620px) {
+      .service-media img, .service-media video { height: 180px; }
+      .service.featured .service-media { height: 200px; }
+      .faq-q { font-size: 15px; padding: 16px 18px; }
+      .faq-a-inner { padding: 0 18px 16px; }
       .wrap, .nav, .hero-inner, .footer-inner { width: calc(100vw - 32px); }
       .nav { padding: 10px 0; }
       .brand img { width: 40px; height: 40px; }
@@ -318,6 +349,7 @@
         <a href="#why" data-zh><span class="en">Why Us</span><span class="zh">为什么选我们</span></a>
         <a href="#work" data-zh><span class="en">Our Work</span><span class="zh">案例</span></a>
         <a href="#process" data-zh><span class="en">Process</span><span class="zh">流程</span></a>
+        <a href="#faq" data-zh><span class="en">FAQ</span><span class="zh">常见问题</span></a>
         <a href="#area" data-zh><span class="en">Service Area</span><span class="zh">服务区域</span></a>
       </div>
       <div class="nav-right">
@@ -371,40 +403,62 @@
         </div>
         <div class="services">
           <article class="service reveal">
+            <div class="service-media"><img src="./assets/project-bathroom-vanity.jpg" alt="Bathroom vanity installation — small job example" loading="lazy"></div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6a1.5 1.5 0 002 2l6-6a4 4 0 005.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></span>
             <h3 data-zh><span class="en">Small Jobs &amp; Repairs</span><span class="zh">上门小活与维修</span></h3>
             <p data-zh><span class="en">Toilet replacement, vanities and sinks, faucets, pot lights, drywall holes, small installs and handyman work — done neatly and without fuss.</span><span class="zh">更换马桶、洗手盆、浴室柜、龙头,加筒灯、补墙洞、小安装、小维修,都能上门干净利落地做好。</span></p>
           </article>
           <article class="service reveal">
+            <div class="service-media"><img src="./assets/project-garden-interlock.jpg" alt="Backyard interlock patio completed" loading="lazy"></div>
             <span class="tag-summer" data-zh><span class="en">SUMMER</span><span class="zh">夏季热门</span></span>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 12c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg></span>
             <h3 data-zh><span class="en">Summer Landscaping &amp; Gardens</span><span class="zh">夏季园艺与绿化</span></h3>
-            <p data-zh><span class="en">Garden beds, planting, hardscaping and yard cleanups to make your outdoor space usable and tidy while the season is right.</span><span class="zh">花园整理、种植、铺装与庭院清理,趁夏季天气好,把户外空间整理得干净好用。</span></p>
+            <p data-zh><span class="en">Garden beds, planting, interlock paving, hardscaping and yard cleanups to make your outdoor space usable and tidy while the season is right.</span><span class="zh">花园整理、种植、连锁砖铺装与庭院清理,趁夏季天气好,把户外空间整理得干净好用。</span></p>
           </article>
           <article class="service reveal">
+            <div class="service-media"><img src="./assets/project-kitchen-modern.jpg" alt="Modern kitchen renovation with white cabinets and quartz countertop" loading="lazy"></div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 9v12"/></svg></span>
             <h3 data-zh><span class="en">Kitchen Renovation</span><span class="zh">厨房装修</span></h3>
             <p data-zh><span class="en">Cabinet layout, countertops, flooring, backsplash, and coordinated placement for sink, stove, fridge and dishwasher.</span><span class="zh">橱柜布局、台面、地板、墙面,水槽、炉灶、冰箱、洗碗机位置统一规划,减少返工。</span></p>
           </article>
           <article class="service reveal">
+            <div class="service-media">
+              <video autoplay muted loop playsinline>
+                <source src="./assets/video-bathroom.mp4" type="video/mp4">
+              </video>
+            </div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4z"/><path d="M7 12V7a2 2 0 012-2 2 2 0 012 2"/></svg></span>
             <h3 data-zh><span class="en">Bathroom Renovation</span><span class="zh">卫生间改造</span></h3>
             <p data-zh><span class="en">Demolition, waterproofing, tile, glass showers, vanities, lighting, and fixture installation.</span><span class="zh">拆旧、防水、瓷砖、玻璃淋浴房、浴室柜、灯具与洁具安装。</span></p>
           </article>
           <article class="service reveal">
+            <div class="service-media">
+              <video autoplay muted loop playsinline>
+                <source src="./assets/video-basement-kitchen.mp4" type="video/mp4">
+              </video>
+            </div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span>
             <h3 data-zh><span class="en">Basements &amp; Rental Units</span><span class="zh">地下室与出租单元</span></h3>
             <p data-zh><span class="en">Partitions, doors, stairs, laundry rooms, and full kitchen/bathroom builds for legal-ready rental conversions.</span><span class="zh">隔墙、门、楼梯、洗衣房,以及厨房与卫生间基础改造,按房屋条件推进出租单元。</span></p>
           </article>
           <article class="service reveal">
+            <div class="service-media"><img src="./assets/project-outdoor-fence.jpg" alt="New cedar fence installation" loading="lazy"></div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 18h18M5 18V9l7-4 7 4v9"/><path d="M9 18v-4h6v4"/></svg></span>
             <h3 data-zh><span class="en">Decks &amp; Outdoor</span><span class="zh">户外露台与庭院</span></h3>
             <p data-zh><span class="en">Backyard decks, fences, and outdoor living spaces — the best time to build is now, while the weather holds.</span><span class="zh">后院 deck、围栏与户外空间。趁夏季天气好,正是开工的最佳时机。</span></p>
           </article>
-          <article class="service reveal">
-            <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M3 13h18"/></svg></span>
-            <h3 data-zh><span class="en">Whole-Home &amp; Interior</span><span class="zh">全屋翻新与室内细节</span></h3>
-            <p data-zh><span class="en">Full-home renovations plus flooring, baseboards, doors, painting and finishing details done properly.</span><span class="zh">全屋翻新,以及复合地板、踢脚线、门、油漆、收口等室内细节,一次做到位。</span></p>
+          <article class="service featured reveal">
+            <div class="service-media">
+              <div class="before-after">
+                <figure class="ba-fig"><img src="./assets/bathroom-before.jpg" alt="Bathroom before renovation"><figcaption class="ba-label before" data-zh><span class="en">BEFORE</span><span class="zh">改造前</span></figcaption></figure>
+                <figure class="ba-fig"><img src="./assets/bathroom-after.jpg" alt="Bathroom after renovation"><figcaption class="ba-label after" data-zh><span class="en">AFTER</span><span class="zh">改造后</span></figcaption></figure>
+              </div>
+            </div>
+            <div class="service-content">
+              <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M3 13h18"/></svg></span>
+              <h3 data-zh><span class="en">Whole-Home &amp; Interior</span><span class="zh">全屋翻新与室内细节</span></h3>
+              <p data-zh><span class="en">Full-home renovations plus flooring, baseboards, doors, painting and finishing details done properly. The before and after above shows what a skilled crew can achieve.</span><span class="zh">全屋翻新,以及复合地板、踢脚线、门、油漆、收口等室内细节,一次做到位。上方改造前后对比展示真实完工效果。</span></p>
+            </div>
           </article>
         </div>
       </div>
@@ -443,80 +497,6 @@
       </div>
     </section>
 
-    <!-- WORK -->
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <span class="kicker">Selected Work</span>
-            <h2 data-zh><span class="en">Real projects, from small fixes to full rooms.</span><span class="zh">真实项目,小活和整间翻新都做。</span></h2>
-          </div>
-          <p data-zh><span class="en">Completed work photos and video walkthrough stills that show clean details, careful finishes and practical workmanship.</span><span class="zh">这里展示完工照片和视频案例截图,让客户看到细节、收口和实际施工效果。</span></p>
-        </div>
-        <div class="cases">
-          <article class="case-card featured reveal">
-            <div class="before-after">
-              <figure class="ba-fig"><img src="./assets/bathroom-before.jpg" alt="Bathroom before renovation with older tub and beige tile"><figcaption class="ba-label before" data-zh><span class="en">BEFORE</span><span class="zh">改造前</span></figcaption></figure>
-              <figure class="ba-fig"><img src="./assets/bathroom-after.jpg" alt="Bathroom after renovation with glass shower, vanity and patterned floor tile"><figcaption class="ba-label after" data-zh><span class="en">AFTER</span><span class="zh">改造后</span></figcaption></figure>
-            </div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Bathroom</span><span class="zh">卫生间</span></span><span class="tag" data-zh><span class="en">Tile</span><span class="zh">瓷砖</span></span><span class="tag" data-zh><span class="en">Glass Shower</span><span class="zh">玻璃淋浴房</span></span></div>
-              <h3 data-zh><span class="en">Old tub to a modern walk-in shower</span><span class="zh">旧浴缸改造为现代淋浴房</span></h3>
-              <p data-zh><span class="en">The dated tub area became a glass walk-in shower with black fixtures, a new vanity, mirror and patterned floor tile.</span><span class="zh">旧浴缸区域改造为玻璃淋浴房,搭配黑色五金、新浴室柜、镜子和花砖地面。</span></p>
-            </div>
-          </article>
-          <article class="case-card reveal">
-            <div class="case-media"><img src="./assets/project-bathroom-vanity.jpg" alt="Finished bathroom with gray vanity, patterned floor tile and glass shower"></div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Bathroom</span><span class="zh">卫生间</span></span><span class="tag" data-zh><span class="en">Vanity</span><span class="zh">浴室柜</span></span><span class="tag" data-zh><span class="en">Lighting</span><span class="zh">灯具</span></span></div>
-              <h3 data-zh><span class="en">Vanity, tile and lighting refresh</span><span class="zh">浴室柜、瓷砖和灯光翻新</span></h3>
-              <p data-zh><span class="en">Clean tile lines, black fixtures and a practical vanity setup for a brighter everyday bathroom.</span><span class="zh">瓷砖、黑色五金、浴室柜和灯光一起更新,让日常使用更明亮、更顺手。</span></p>
-            </div>
-          </article>
-          <article class="case-card reveal">
-            <div class="case-media"><img src="./assets/project-luxury-bathroom.jpg" alt="Large bathroom with freestanding tub, glass shower and wall-mounted toilet"></div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Bathroom</span><span class="zh">卫生间</span></span><span class="tag" data-zh><span class="en">Tub</span><span class="zh">浴缸</span></span><span class="tag" data-zh><span class="en">Shower</span><span class="zh">淋浴</span></span></div>
-              <h3 data-zh><span class="en">Full bathroom with tub and glass shower</span><span class="zh">浴缸与玻璃淋浴一体改造</span></h3>
-              <p data-zh><span class="en">A calm, modern bathroom layout with large-format tile, shower glass, tub and coordinated black fixtures.</span><span class="zh">大砖、玻璃、浴缸和黑色五金统一搭配,整体简洁、耐看、好打理。</span></p>
-            </div>
-          </article>
-          <article class="case-card reveal">
-            <div class="case-media"><img src="./assets/project-basement-suite.jpg" alt="Finished basement suite kitchen with white cabinets, wood floor and stair detail"></div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Basement</span><span class="zh">地下室</span></span><span class="tag" data-zh><span class="en">Kitchen</span><span class="zh">厨房</span></span><span class="tag" data-zh><span class="en">Suite</span><span class="zh">套间</span></span></div>
-              <h3 data-zh><span class="en">Basement suite kitchen and trim work</span><span class="zh">地下室套间厨房和木作收口</span></h3>
-              <p data-zh><span class="en">Cabinets, backsplash, flooring, stair detail and finishing work for a clean basement living space.</span><span class="zh">橱柜、墙砖、地板、楼梯细节和收口一起处理,做出干净实用的地下室空间。</span></p>
-            </div>
-          </article>
-          <article class="case-card reveal">
-            <div class="case-media"><img src="./assets/project-kitchen-cabinets.jpg" alt="Bright kitchen renovation with white cabinets, gray backsplash and pot lights"></div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Kitchen</span><span class="zh">厨房</span></span><span class="tag" data-zh><span class="en">Cabinets</span><span class="zh">橱柜</span></span><span class="tag" data-zh><span class="en">Pot Lights</span><span class="zh">筒灯</span></span></div>
-              <h3 data-zh><span class="en">Cabinets, backsplash and pot lights</span><span class="zh">橱柜、墙砖和筒灯</span></h3>
-              <p data-zh><span class="en">A bright kitchen update with full-height cabinets, new backsplash, counters and recessed lighting.</span><span class="zh">橱柜、台面、墙砖和筒灯整体更新,让厨房更亮、更整洁。</span></p>
-            </div>
-          </article>
-          <article class="case-card reveal">
-            <div class="case-media"><span class="media-label" data-zh><span class="en">VIDEO STILL</span><span class="zh">视频案例</span></span><img src="./assets/project-basement-potlights.jpg" alt="Finished basement room with pot lights, gray feature wall and flooring"></div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Basement</span><span class="zh">地下室</span></span><span class="tag" data-zh><span class="en">Pot Lights</span><span class="zh">筒灯</span></span><span class="tag" data-zh><span class="en">Painting</span><span class="zh">油漆</span></span></div>
-              <h3 data-zh><span class="en">Basement finishing and lighting</span><span class="zh">地下室完工和筒灯效果</span></h3>
-              <p data-zh><span class="en">From drywall and paint to flooring, shelves and pot lights, finished so the room feels usable and clean.</span><span class="zh">石膏板、油漆、地板、搁板和筒灯一起完成,让地下室真正好用、清爽。</span></p>
-            </div>
-          </article>
-          <article class="case-card reveal">
-            <div class="case-media"><span class="media-label" data-zh><span class="en">VIDEO STILL</span><span class="zh">视频案例</span></span><img src="./assets/project-shower-fixtures.jpg" alt="Shower tile and fixture detail from a video walkthrough"></div>
-            <div class="case-body">
-              <div class="case-tags"><span class="tag" data-zh><span class="en">Shower</span><span class="zh">淋浴</span></span><span class="tag" data-zh><span class="en">Fixture</span><span class="zh">五金</span></span><span class="tag" data-zh><span class="en">Detail</span><span class="zh">细节</span></span></div>
-              <h3 data-zh><span class="en">Shower fixture and tile detail</span><span class="zh">淋浴五金和瓷砖细节</span></h3>
-              <p data-zh><span class="en">Video walkthroughs are available by WhatsApp when photos are not enough to show the work clearly.</span><span class="zh">如果照片看不完整,可以通过 WhatsApp 发送或查看视频案例,细节更清楚。</span></p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- PLANNING -->
     <section class="section alt" id="planning">
       <div class="wrap planning">
@@ -548,6 +528,73 @@
           <article class="step reveal"><h3 data-zh><span class="en">Clear Quote</span><span class="zh">明确报价</span></h3><p data-zh><span class="en">Confirm the work, materials, timing and price before we start.</span><span class="zh">开工前确认工作内容、材料、时间和价格。</span></p></article>
           <article class="step reveal"><h3 data-zh><span class="en">On-Site Work</span><span class="zh">上门施工</span></h3><p data-zh><span class="en">We arrive prepared, work neatly and keep the home as clean as possible.</span><span class="zh">按约上门,施工利落,尽量保持现场整洁。</span></p></article>
           <article class="step reveal"><h3 data-zh><span class="en">Finish & Check</span><span class="zh">完工检查</span></h3><p data-zh><span class="en">Review the details together and confirm the job is properly finished.</span><span class="zh">完工后一起检查细节,确认做好再交付。</span></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal" style="justify-content:center;text-align:center;display:block;margin-bottom:36px;">
+          <span class="kicker">FAQ</span>
+          <h2 data-zh><span class="en">Common questions, straight answers.</span><span class="zh">常见问题,直接解答。</span></h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-q" data-zh>
+              <span class="en">Do you take small jobs — like replacing a toilet or patching a wall?</span>
+              <span class="zh">你们接小活吗？比如换马桶、补墙洞这种？</span>
+              <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-zh>
+              <span class="en">Yes — small jobs are welcome. Toilet replacement, vanity or sink installation, pot lights, wall patching and other handyman work are all things we handle. Just send us a photo of the issue and we'll let you know the next step.</span>
+              <span class="zh">当然接！换马桶、装洗手盆或浴室柜、加筒灯、补墙洞这类活我们都做。拍张照片发给我们,我们告诉你下一步。</span>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-zh>
+              <span class="en">Can I communicate in Chinese?</span>
+              <span class="zh">可以用中文沟通吗？</span>
+              <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-zh>
+              <span class="en">Yes. Our team speaks Mandarin and you can reach us in Chinese via WhatsApp, phone or the contact form on this page.</span>
+              <span class="zh">可以。我们团队说普通话,可以用中文通过 WhatsApp、电话或本页表单联系我们。</span>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-zh>
+              <span class="en">Is the on-site quote free?</span>
+              <span class="zh">上门报价收费吗？</span>
+              <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-zh>
+              <span class="en">On-site quotes for renovation projects are free. For small jobs, we can often give a rough estimate from photos before any visit is needed.</span>
+              <span class="zh">装修项目上门报价免费。小活的话,通常发照片就能先给初步判断,不一定需要上门。</span>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-zh>
+              <span class="en">Who supplies the materials?</span>
+              <span class="zh">材料由谁负责采购？</span>
+              <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-zh>
+              <span class="en">It depends on the project. We can source materials, or you can purchase them directly — we'll discuss what works best and confirm everything in writing before starting.</span>
+              <span class="zh">视项目而定,可以由我们采购,也可以你们自购。开工前我们会一起确认,并以书面形式列清楚。</span>
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" data-zh>
+              <span class="en">How quickly can you start?</span>
+              <span class="zh">多快能安排上门？</span>
+              <span class="arrow"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner" data-zh>
+              <span class="en">For small jobs we can often book within a few days. Larger renovations depend on scope and scheduling. Send us the details and we'll give you a realistic timeline.</span>
+              <span class="zh">小活通常几天内就能安排上门。大装修视工程规模而定。把需求发给我们,我们给你一个实际的时间安排。</span>
+            </div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -674,7 +721,7 @@
 
   <a class="fab" href="https://wa.me/16479799301" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.821 9.821 0 001.51 5.26l-.999 3.648 3.488-.915zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    <span data-zh><span class="en">WhatsApp</span><span class="zh">微信咨询</span></span>
+    <span data-zh><span class="en">WhatsApp</span><span class="zh">WhatsApp 联系</span></span>
   </a>
 
   <footer>
@@ -786,6 +833,16 @@
       }
     });
 
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
     }, { threshold: 0.12 });
@@ -794,5 +851,12 @@
       document.querySelectorAll('.hero .reveal').forEach(function(el){ el.classList.add('in'); });
     });
   </script>
+  <!-- ============================================================
+       TIDIO LIVE CHAT — 3 steps to activate:
+       1. Sign up free at https://www.tidio.com
+       2. Add your website, copy the Public Key shown in Settings → General
+       3. Replace YOUR_TIDIO_KEY below with that key, then git push
+       ============================================================ -->
+  <!-- <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script> -->
 </body>
 </html>
