@@ -152,9 +152,13 @@
     .why-visual img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
 
     /* ---------- work ---------- */
-    .cases { display: grid; grid-template-columns: minmax(0, 820px); justify-content: center; gap: 20px; }
+    .cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
     .case-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--shadow-sm); }
-    .case-card img { width: 100%; height: 430px; object-fit: cover; background: var(--soft); }
+    .case-card.featured { grid-column: 1 / -1; }
+    .case-card img { width: 100%; height: 300px; object-fit: cover; background: var(--soft); }
+    .case-media { position: relative; background: var(--soft); }
+    .case-media img { height: 290px; }
+    .media-label { position: absolute; top: 12px; left: 12px; border-radius: 999px; padding: 5px 11px; background: rgba(33,40,46,0.78); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; backdrop-filter: blur(4px); }
     .case-body { padding: 22px 24px 26px; }
     .case-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 13px; }
     .tag { border-radius: 999px; padding: 5px 11px; color: var(--gg); background: var(--gg-soft); font-size: 12px; font-weight: 700; }
@@ -163,7 +167,7 @@
 
     .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); }
     .ba-fig { position: relative; margin: 0; background: var(--paper); }
-    .ba-fig img { width: 100%; height: 300px; object-fit: cover; }
+    .ba-fig img { width: 100%; height: 320px; object-fit: cover; }
     .ba-label { position: absolute; top: 12px; left: 12px; border-radius: 999px; padding: 5px 11px; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; backdrop-filter: blur(4px); }
     .ba-label.before { background: rgba(33,40,46,0.74); }
     .ba-label.after { background: var(--orange); }
@@ -253,7 +257,7 @@
     .footer-reg { color: #8a949c; line-height: 1.7; }
 
     /* ---------- reveal ---------- */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms cubic-bezier(.2,.7,.3,1), transform 700ms cubic-bezier(.2,.7,.3,1); }
+    .reveal { opacity: 1; transform: none; transition: opacity 700ms cubic-bezier(.2,.7,.3,1), transform 700ms cubic-bezier(.2,.7,.3,1); }
     .reveal.in { opacity: 1; transform: none; }
     .hero .reveal { transition-delay: var(--d, 0ms); }
 
@@ -445,20 +449,68 @@
         <div class="section-head reveal">
           <div>
             <span class="kicker">Selected Work</span>
-            <h2 data-zh><span class="en">Real projects. Real before &amp; afters.</span><span class="zh">真实项目,真实的前后对比。</span></h2>
+            <h2 data-zh><span class="en">Real projects, from small fixes to full rooms.</span><span class="zh">真实项目,小活和整间翻新都做。</span></h2>
           </div>
-          <p data-zh><span class="en">Photos from completed work — before and after details that show the workmanship.</span><span class="zh">这里只放完成项目的真实照片和前后对比,让客户看到实际施工效果。</span></p>
+          <p data-zh><span class="en">Completed work photos and video walkthrough stills that show clean details, careful finishes and practical workmanship.</span><span class="zh">这里展示完工照片和视频案例截图,让客户看到细节、收口和实际施工效果。</span></p>
         </div>
         <div class="cases">
-          <article class="case-card reveal">
+          <article class="case-card featured reveal">
             <div class="before-after">
               <figure class="ba-fig"><img src="./assets/bathroom-before.jpg" alt="Bathroom before renovation with older tub and beige tile"><figcaption class="ba-label before" data-zh><span class="en">BEFORE</span><span class="zh">改造前</span></figcaption></figure>
               <figure class="ba-fig"><img src="./assets/bathroom-after.jpg" alt="Bathroom after renovation with glass shower, vanity and patterned floor tile"><figcaption class="ba-label after" data-zh><span class="en">AFTER</span><span class="zh">改造后</span></figcaption></figure>
             </div>
             <div class="case-body">
-              <div class="case-tags"><span class="tag">Bathroom</span><span class="tag">Tile</span><span class="tag">Glass Shower</span></div>
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Bathroom</span><span class="zh">卫生间</span></span><span class="tag" data-zh><span class="en">Tile</span><span class="zh">瓷砖</span></span><span class="tag" data-zh><span class="en">Glass Shower</span><span class="zh">玻璃淋浴房</span></span></div>
               <h3 data-zh><span class="en">Old tub to a modern walk-in shower</span><span class="zh">旧浴缸改造为现代淋浴房</span></h3>
               <p data-zh><span class="en">The dated tub area became a glass walk-in shower with black fixtures, a new vanity, mirror and patterned floor tile.</span><span class="zh">旧浴缸区域改造为玻璃淋浴房,搭配黑色五金、新浴室柜、镜子和花砖地面。</span></p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-media"><img src="./assets/project-bathroom-vanity.jpg" alt="Finished bathroom with gray vanity, patterned floor tile and glass shower"></div>
+            <div class="case-body">
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Bathroom</span><span class="zh">卫生间</span></span><span class="tag" data-zh><span class="en">Vanity</span><span class="zh">浴室柜</span></span><span class="tag" data-zh><span class="en">Lighting</span><span class="zh">灯具</span></span></div>
+              <h3 data-zh><span class="en">Vanity, tile and lighting refresh</span><span class="zh">浴室柜、瓷砖和灯光翻新</span></h3>
+              <p data-zh><span class="en">Clean tile lines, black fixtures and a practical vanity setup for a brighter everyday bathroom.</span><span class="zh">瓷砖、黑色五金、浴室柜和灯光一起更新,让日常使用更明亮、更顺手。</span></p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-media"><img src="./assets/project-luxury-bathroom.jpg" alt="Large bathroom with freestanding tub, glass shower and wall-mounted toilet"></div>
+            <div class="case-body">
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Bathroom</span><span class="zh">卫生间</span></span><span class="tag" data-zh><span class="en">Tub</span><span class="zh">浴缸</span></span><span class="tag" data-zh><span class="en">Shower</span><span class="zh">淋浴</span></span></div>
+              <h3 data-zh><span class="en">Full bathroom with tub and glass shower</span><span class="zh">浴缸与玻璃淋浴一体改造</span></h3>
+              <p data-zh><span class="en">A calm, modern bathroom layout with large-format tile, shower glass, tub and coordinated black fixtures.</span><span class="zh">大砖、玻璃、浴缸和黑色五金统一搭配,整体简洁、耐看、好打理。</span></p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-media"><img src="./assets/project-basement-suite.jpg" alt="Finished basement suite kitchen with white cabinets, wood floor and stair detail"></div>
+            <div class="case-body">
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Basement</span><span class="zh">地下室</span></span><span class="tag" data-zh><span class="en">Kitchen</span><span class="zh">厨房</span></span><span class="tag" data-zh><span class="en">Suite</span><span class="zh">套间</span></span></div>
+              <h3 data-zh><span class="en">Basement suite kitchen and trim work</span><span class="zh">地下室套间厨房和木作收口</span></h3>
+              <p data-zh><span class="en">Cabinets, backsplash, flooring, stair detail and finishing work for a clean basement living space.</span><span class="zh">橱柜、墙砖、地板、楼梯细节和收口一起处理,做出干净实用的地下室空间。</span></p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-media"><img src="./assets/project-kitchen-cabinets.jpg" alt="Bright kitchen renovation with white cabinets, gray backsplash and pot lights"></div>
+            <div class="case-body">
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Kitchen</span><span class="zh">厨房</span></span><span class="tag" data-zh><span class="en">Cabinets</span><span class="zh">橱柜</span></span><span class="tag" data-zh><span class="en">Pot Lights</span><span class="zh">筒灯</span></span></div>
+              <h3 data-zh><span class="en">Cabinets, backsplash and pot lights</span><span class="zh">橱柜、墙砖和筒灯</span></h3>
+              <p data-zh><span class="en">A bright kitchen update with full-height cabinets, new backsplash, counters and recessed lighting.</span><span class="zh">橱柜、台面、墙砖和筒灯整体更新,让厨房更亮、更整洁。</span></p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-media"><span class="media-label" data-zh><span class="en">VIDEO STILL</span><span class="zh">视频案例</span></span><img src="./assets/project-basement-potlights.jpg" alt="Finished basement room with pot lights, gray feature wall and flooring"></div>
+            <div class="case-body">
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Basement</span><span class="zh">地下室</span></span><span class="tag" data-zh><span class="en">Pot Lights</span><span class="zh">筒灯</span></span><span class="tag" data-zh><span class="en">Painting</span><span class="zh">油漆</span></span></div>
+              <h3 data-zh><span class="en">Basement finishing and lighting</span><span class="zh">地下室完工和筒灯效果</span></h3>
+              <p data-zh><span class="en">From drywall and paint to flooring, shelves and pot lights, finished so the room feels usable and clean.</span><span class="zh">石膏板、油漆、地板、搁板和筒灯一起完成,让地下室真正好用、清爽。</span></p>
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-media"><span class="media-label" data-zh><span class="en">VIDEO STILL</span><span class="zh">视频案例</span></span><img src="./assets/project-shower-fixtures.jpg" alt="Shower tile and fixture detail from a video walkthrough"></div>
+            <div class="case-body">
+              <div class="case-tags"><span class="tag" data-zh><span class="en">Shower</span><span class="zh">淋浴</span></span><span class="tag" data-zh><span class="en">Fixture</span><span class="zh">五金</span></span><span class="tag" data-zh><span class="en">Detail</span><span class="zh">细节</span></span></div>
+              <h3 data-zh><span class="en">Shower fixture and tile detail</span><span class="zh">淋浴五金和瓷砖细节</span></h3>
+              <p data-zh><span class="en">Video walkthroughs are available by WhatsApp when photos are not enough to show the work clearly.</span><span class="zh">如果照片看不完整,可以通过 WhatsApp 发送或查看视频案例,细节更清楚。</span></p>
             </div>
           </article>
         </div>
