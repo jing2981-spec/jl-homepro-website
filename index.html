@@ -864,6 +864,14 @@
     });
   </script>
   <!-- Tidio live chat widget -->
+  <script>
+    document.addEventListener('tidioChat-ready', function() {
+      function closeAutoPopup() {
+        if (window.tidioChatApi) window.tidioChatApi.close();
+      }
+      [0, 800, 2000].forEach(function(delay) { setTimeout(closeAutoPopup, delay); });
+    });
+  </script>
   <script src="//code.tidio.co/itotwf5agykz5dus7af2rxfkr0tzkwow.js" async></script>
 </body>
 </html>
