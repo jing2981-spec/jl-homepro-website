@@ -149,6 +149,10 @@
     .service.featured .service-media { height: 300px; }
     .service.featured .service-media .before-after { height: 100%; }
     .service.featured .service-media .ba-fig img { height: 100%; }
+    .service-media .before-after { height: 220px; }
+    .service-media .ba-fig { height: 100%; overflow: hidden; }
+    .service-media .ba-fig img,
+    .service-media .ba-fig video { height: 100%; }
     .service.featured .service-content { display: grid; grid-template-columns: auto 1fr; gap: 0 16px; align-items: start; margin-top: 4px; }
     .service.featured .service-content h3 { grid-column: 2; margin-bottom: 8px; }
     .service.featured .service-content p { grid-column: 2; }
@@ -191,7 +195,8 @@
 
     .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); }
     .ba-fig { position: relative; margin: 0; background: var(--paper); }
-    .ba-fig img { width: 100%; height: 320px; object-fit: cover; }
+    .ba-fig img,
+    .ba-fig video { width: 100%; height: 320px; object-fit: cover; display: block; }
     .ba-label { position: absolute; top: 12px; left: 12px; border-radius: 999px; padding: 5px 11px; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; backdrop-filter: blur(4px); }
     .ba-label.before { background: rgba(33,40,46,0.74); }
     .ba-label.after { background: var(--orange); }
@@ -433,9 +438,16 @@
           </article>
           <article class="service reveal">
             <div class="service-media">
-              <video autoplay muted loop playsinline>
-                <source src="./assets/video-basement.mp4" type="video/mp4">
-              </video>
+              <div class="before-after">
+                <figure class="ba-fig">
+                  <video autoplay muted loop playsinline><source src="./assets/video-basement-before.mp4" type="video/mp4"></video>
+                  <figcaption class="ba-label before" data-zh><span class="en">BEFORE</span><span class="zh">改造前</span></figcaption>
+                </figure>
+                <figure class="ba-fig">
+                  <video autoplay muted loop playsinline><source src="./assets/video-basement.mp4" type="video/mp4"></video>
+                  <figcaption class="ba-label after" data-zh><span class="en">AFTER</span><span class="zh">改造后</span></figcaption>
+                </figure>
+              </div>
             </div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span>
             <h3 data-zh><span class="en">Basements &amp; Rental Units</span><span class="zh">地下室与出租单元</span></h3>
