@@ -13,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;600;700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -33,7 +33,7 @@
       --gg-line: #dde6e1;
       --shadow: 0 20px 50px rgba(33, 40, 46, 0.10);
       --shadow-sm: 0 8px 22px rgba(33, 40, 46, 0.07);
-      --display: "Bricolage Grotesque", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --display: "Cormorant Garamond", "Noto Serif SC", "Songti SC", "PingFang SC", serif;
       --body: "Manrope", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
     }
 
@@ -51,7 +51,7 @@
     [data-zh] > .zh { display: none; }
     html[lang="zh"] [data-zh] > .en { display: none; }
     html[lang="zh"] [data-zh] > .zh { display: inline; }
-    html[lang="zh"] { --display: "PingFang SC", "Noto Sans SC", "Bricolage Grotesque", "Microsoft YaHei", sans-serif; }
+    html[lang="zh"] { --display: "Noto Serif SC", "Songti SC", "PingFang SC", "Microsoft YaHei", serif; }
 
     .wrap { width: min(1180px, calc(100vw - 44px)); margin: 0 auto; }
 
@@ -110,7 +110,7 @@
     }
     .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(238,106,31,0.18); }
 
-    h1 { font-family: var(--display); font-weight: 800; margin: 0 0 22px; color: var(--ink); font-size: clamp(40px, 6.2vw, 74px); line-height: 1.0; letter-spacing: -0.03em; }
+    h1 { font-family: var(--display); font-weight: 700; margin: 0 0 22px; color: var(--ink); font-size: clamp(44px, 6.4vw, 80px); line-height: 1.04; letter-spacing: -0.012em; }
     h1 .accent { color: var(--orange); }
     .hero-copy { max-width: 600px; margin: 0 auto 34px; color: var(--muted); font-size: clamp(16px, 1.9vw, 20px); }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 30px; }
@@ -126,7 +126,7 @@
     .kicker { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 14px; color: var(--orange-dark); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
     .kicker::before { content: ""; width: 22px; height: 2px; background: var(--orange); }
 
-    h2 { font-family: var(--display); font-weight: 800; margin: 0; color: var(--ink); font-size: clamp(28px, 3.8vw, 46px); line-height: 1.06; letter-spacing: -0.025em; }
+    h2 { font-family: var(--display); font-weight: 700; margin: 0; color: var(--ink); font-size: clamp(30px, 3.7vw, 50px); line-height: 1.12; letter-spacing: -0.008em; }
     .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 44px; }
     .section-head h2 { max-width: 620px; }
     .section-head p { max-width: 380px; margin: 0; color: var(--muted); font-size: 15px; }
