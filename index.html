@@ -876,9 +876,11 @@
   <script>
     document.addEventListener('tidioChat-ready', function() {
       function closeAutoPopup() {
-        if (window.tidioChatApi) window.tidioChatApi.close();
+        if (!window.tidioChatApi) return;
+        window.tidioChatApi.close();
+        if (typeof window.tidioChatApi.show === 'function') window.tidioChatApi.show();
       }
-      [0, 800, 2000].forEach(function(delay) { setTimeout(closeAutoPopup, delay); });
+      [1200, 3000].forEach(function(delay) { setTimeout(closeAutoPopup, delay); });
     });
   </script>
   <script src="//code.tidio.co/itotwf5agykz5dus7af2rxfkr0tzkwow.js" async></script>
