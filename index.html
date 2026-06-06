@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JL HomePro Solution | Renovation & Small Jobs Across the GTA</title>
-  <meta name="description" content="JL HomePro Solution — GTA home renovation and small on-site jobs, from kitchens and bathrooms to toilet replacement, vanities, pot lights and wall repairs. Skilled Chinese team, fair pricing, free quote.">
+  <meta name="description" content="JL HomePro Solution — GTA home renovation and small on-site jobs, from kitchens and bathrooms to toilet replacement, vanities, pot lights and wall repairs. Skilled Chinese team, affordable high-quality service, free quote.">
   <link rel="icon" href="./assets/logo.png">
   <meta property="og:title" content="JL HomePro Solution | GTA Renovation & Small Jobs">
-  <meta property="og:description" content="Home renovation and small on-site repair jobs across the GTA. Skilled Chinese crew, fair pricing, free quote.">
-  <meta property="og:image" content="./assets/kitchen-after.jpg">
+  <meta property="og:description" content="Home renovation and small on-site repair jobs across the GTA. Skilled Chinese crew, affordable high-quality service, free quote.">
+  <meta property="og:image" content="./assets/bathroom-after.jpg">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,7 +96,7 @@
     .hero { position: relative; padding: 156px 0 86px; text-align: center; overflow: hidden; }
     .hero::before {
       content: ""; position: absolute; inset: 0; z-index: -1;
-      background: linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.965)), url("./assets/kitchen-after.jpg") center / cover no-repeat;
+      background: linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.965)), url("./assets/bathroom-after.jpg") center / cover no-repeat;
     }
     .hero::after {
       content: ""; position: absolute; inset: 0; z-index: -1;
@@ -152,7 +152,7 @@
     .why-visual img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
 
     /* ---------- work ---------- */
-    .cases { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; }
+    .cases { display: grid; grid-template-columns: minmax(0, 820px); justify-content: center; gap: 20px; }
     .case-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: var(--shadow-sm); }
     .case-card img { width: 100%; height: 430px; object-fit: cover; background: var(--soft); }
     .case-body { padding: 22px 24px 26px; }
@@ -276,12 +276,12 @@
       .nav .btn { display: none; }
       .hero { padding: 124px 0 64px; }
       .eyebrow { max-width: 100%; justify-content: center; white-space: normal; text-align: center; }
-      h1 { font-size: 42px; line-height: 1.08; letter-spacing: 0; }
+      h1 { font-size: 36px; line-height: 1.1; letter-spacing: 0; }
       h2 { font-size: 32px; line-height: 1.14; letter-spacing: 0; }
-      html[lang="zh"] h1 { font-size: 38px; }
+      html[lang="zh"] h1 { font-size: 34px; }
       html[lang="zh"] h2 { font-size: 30px; }
       html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] .hero-copy, html[lang="zh"] .section-head p { overflow-wrap: anywhere; word-break: break-all; }
-      .hero-copy { font-size: 16px; }
+      .hero-copy { max-width: min(300px, 100%); font-size: 15px; }
       .hero-proof { display: grid; grid-template-columns: 1fr; justify-items: center; }
       .section { padding: 64px 0; }
       .section-head { display: block; }
@@ -332,12 +332,12 @@
       <div class="hero-inner">
         <span class="eyebrow reveal" style="--d:0ms"><span class="dot"></span><span data-zh><span class="en">Now booking across the GTA</span><span class="zh">大多地区现已接单</span></span></span>
         <h1 class="reveal" style="--d:90ms" data-zh>
-          <span class="en">Quality work<br>for your home<br><span class="accent">at fair prices.</span></span>
-          <span class="zh">大小工程都能做,<br><span class="accent">质量好,价格实在。</span></span>
+          <span class="en">Affordable prices.<br><span class="accent">High-quality service.</span></span>
+          <span class="zh">可负担的价格,<br><span class="accent">高质量的服务。</span></span>
         </h1>
         <p class="hero-copy reveal" style="--d:180ms" data-zh>
-          <span class="en">From kitchens, bathrooms, basements and decks to small on-site jobs like replacing toilets, vanities, faucets, pot lights and patching wall holes. Our skilled Chinese crew brings 10+ years of hands-on experience and a practical approach to fair, reliable work.</span>
-          <span class="zh">从厨房、卫生间、地下室、露台到各类上门小活都可以做:更换马桶、洗手盆、龙头,加装筒灯,补墙洞,小修小补。十年以上经验的华人施工团队,手艺精湛,价格能负担,质量不将就。</span>
+          <span class="en">Small repairs, bathrooms, basements, decks and full renovations. 10+ years of experience. High-quality service at prices you can afford.</span>
+          <span class="zh">小修小补、卫生间、地下室、露台和整屋翻新都能做。十年以上经验的华人施工团队,用可负担得起的价格,为你提供高质量的服务。</span>
         </p>
         <div class="hero-actions reveal" style="--d:260ms">
           <a class="btn primary" href="#contact" data-zh><span class="en">Get a Free On-Site Quote</span><span class="zh">预约免费上门报价</span></a>
@@ -363,9 +363,20 @@
             <span class="kicker">Services</span>
             <h2 data-zh><span class="en">Small fixes, repairs, and full renovations.</span><span class="zh">小修小补、整屋翻新,<br>都能上门处理。</span></h2>
           </div>
-          <p data-zh><span class="en">Need a toilet replaced, a sink or vanity installed, pot lights added, holes patched, or a room renovated? Send photos or book an on-site visit, and we'll give you a practical quote.</span><span class="zh">换马桶、装洗手盆或浴室柜、加筒灯、补墙洞,或者做一个房间的翻新,都可以联系我们。发照片或约上门,我们给你实在报价。</span></p>
+          <p data-zh><span class="en">Need a toilet replaced, a sink or vanity installed, pot lights added, holes patched, or a room renovated? Send photos or book an on-site visit, and we'll give you a clear quote.</span><span class="zh">换马桶、装洗手盆或浴室柜、加筒灯、补墙洞,或者做一个房间的翻新,都可以联系我们。发照片或约上门,我们给你清楚报价。</span></p>
         </div>
         <div class="services">
+          <article class="service reveal">
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6a1.5 1.5 0 002 2l6-6a4 4 0 005.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></span>
+            <h3 data-zh><span class="en">Small Jobs &amp; Repairs</span><span class="zh">上门小活与维修</span></h3>
+            <p data-zh><span class="en">Toilet replacement, vanities and sinks, faucets, pot lights, drywall holes, small installs and handyman work — done neatly and without fuss.</span><span class="zh">更换马桶、洗手盆、浴室柜、龙头,加筒灯、补墙洞、小安装、小维修,都能上门干净利落地做好。</span></p>
+          </article>
+          <article class="service reveal">
+            <span class="tag-summer" data-zh><span class="en">SUMMER</span><span class="zh">夏季热门</span></span>
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 12c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg></span>
+            <h3 data-zh><span class="en">Summer Landscaping &amp; Gardens</span><span class="zh">夏季园艺与绿化</span></h3>
+            <p data-zh><span class="en">Garden beds, planting, hardscaping and yard cleanups to make your outdoor space usable and tidy while the season is right.</span><span class="zh">花园整理、种植、铺装与庭院清理,趁夏季天气好,把户外空间整理得干净好用。</span></p>
+          </article>
           <article class="service reveal">
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 9v12"/></svg></span>
             <h3 data-zh><span class="en">Kitchen Renovation</span><span class="zh">厨房装修</span></h3>
@@ -382,25 +393,14 @@
             <p data-zh><span class="en">Partitions, doors, stairs, laundry rooms, and full kitchen/bathroom builds for legal-ready rental conversions.</span><span class="zh">隔墙、门、楼梯、洗衣房,以及厨房与卫生间基础改造,按房屋条件推进出租单元。</span></p>
           </article>
           <article class="service reveal">
-            <span class="tag-summer" data-zh><span class="en">SUMMER</span><span class="zh">夏季热门</span></span>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 18h18M5 18V9l7-4 7 4v9"/><path d="M9 18v-4h6v4"/></svg></span>
             <h3 data-zh><span class="en">Decks &amp; Outdoor</span><span class="zh">户外露台与庭院</span></h3>
             <p data-zh><span class="en">Backyard decks, fences, and outdoor living spaces — the best time to build is now, while the weather holds.</span><span class="zh">后院 deck、围栏与户外空间。趁夏季天气好,正是开工的最佳时机。</span></p>
           </article>
           <article class="service reveal">
-            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22V8M12 8c0-3 2-5 5-5 0 3-2 5-5 5zM12 12c0-3-2-5-5-5 0 3 2 5 5 5z"/></svg></span>
-            <h3 data-zh><span class="en">Landscaping &amp; Gardens</span><span class="zh">园艺与绿化</span></h3>
-            <p data-zh><span class="en">Garden beds, planting, hardscaping and yard cleanups to make your outdoor space usable and tidy.</span><span class="zh">花园整理、种植、铺装与庭院清理,让户外空间整洁好用。</span></p>
-          </article>
-          <article class="service reveal">
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><path d="M3 13h18"/></svg></span>
             <h3 data-zh><span class="en">Whole-Home &amp; Interior</span><span class="zh">全屋翻新与室内细节</span></h3>
             <p data-zh><span class="en">Full-home renovations plus flooring, baseboards, doors, painting and finishing details done properly.</span><span class="zh">全屋翻新,以及复合地板、踢脚线、门、油漆、收口等室内细节,一次做到位。</span></p>
-          </article>
-          <article class="service reveal">
-            <span class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6a1.5 1.5 0 002 2l6-6a4 4 0 005.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></span>
-            <h3 data-zh><span class="en">Small Jobs &amp; Repairs</span><span class="zh">上门小活与维修</span></h3>
-            <p data-zh><span class="en">Toilet replacement, vanities and sinks, faucets, pot lights, drywall holes, small installs and handyman work — done neatly and without fuss.</span><span class="zh">更换马桶、洗手盆、浴室柜、龙头,加筒灯、补墙洞、小安装、小维修,都能上门干净利落地做好。</span></p>
           </article>
         </div>
       </div>
@@ -412,7 +412,7 @@
         <div class="why-grid">
           <div class="reveal">
             <span class="kicker">Why JL HomePro</span>
-            <h2 data-zh><span class="en">Experienced tradespeople, fair prices, solid work.</span><span class="zh">经验足、价格实在、活做得漂亮。</span></h2>
+            <h2 data-zh><span class="en">Experienced tradespeople. Affordable, high-quality service.</span><span class="zh">经验足,用可负担的价格提供高质量服务。</span></h2>
             <div class="why-list">
               <div class="why-item">
                 <span class="num">01</span>
@@ -420,7 +420,7 @@
               </div>
               <div class="why-item">
                 <span class="num">02</span>
-                <div><h4 data-zh><span class="en">Quality work at affordable prices</span><span class="zh">用能负担的价格做出质量</span></h4><p data-zh><span class="en">We focus on practical solutions, careful workmanship and honest pricing, so the finished work feels worth what you paid.</span><span class="zh">我们重视实用方案、认真手艺和合理报价,让客户用能负担的价格,得到看得见的质量。</span></p></div>
+                <div><h4 data-zh><span class="en">High-quality service at affordable prices</span><span class="zh">用可负担得起的价格,得到高质量的服务</span></h4><p data-zh><span class="en">We focus on practical solutions, careful workmanship and clear pricing, so the finished work feels solid and worth choosing.</span><span class="zh">我们重视实用方案、认真手艺和清楚报价,让客户用可负担得起的价格,得到高质量、看得见的服务。</span></p></div>
               </div>
               <div class="why-item">
                 <span class="num">03</span>
@@ -447,17 +447,9 @@
             <span class="kicker">Selected Work</span>
             <h2 data-zh><span class="en">Real projects. Real before &amp; afters.</span><span class="zh">真实项目,真实的前后对比。</span></h2>
           </div>
-          <p data-zh><span class="en">Photos from completed work — kitchens, bathrooms, and the finishes that make a space feel new.</span><span class="zh">这里只放完成项目的真实照片:厨房、卫生间,以及让空间焕然一新的细节。</span></p>
+          <p data-zh><span class="en">Photos from completed work — before and after details that show the workmanship.</span><span class="zh">这里只放完成项目的真实照片和前后对比,让客户看到实际施工效果。</span></p>
         </div>
         <div class="cases">
-          <article class="case-card reveal">
-            <img src="./assets/kitchen-after.jpg" alt="White kitchen renovation with shaker cabinets, quartz counters, stainless appliances and wood-look flooring">
-            <div class="case-body">
-              <div class="case-tags"><span class="tag">Kitchen</span><span class="tag">Cabinets</span><span class="tag">Flooring</span></div>
-              <h3 data-zh><span class="en">Bright, rental-ready kitchen</span><span class="zh">明亮、可出租的厨房升级</span></h3>
-              <p data-zh><span class="en">White shaker cabinets, light quartz counters, wood-look floors and coordinated appliance placement keep this kitchen bright, clean and easy to rent.</span><span class="zh">白色橱柜、浅色石英台面、木纹地板和统一的电器位规划,让空间保持明亮、干净、好出租。</span></p>
-            </div>
-          </article>
           <article class="case-card reveal">
             <div class="before-after">
               <figure class="ba-fig"><img src="./assets/bathroom-before.jpg" alt="Bathroom before renovation with older tub and beige tile"><figcaption class="ba-label before" data-zh><span class="en">BEFORE</span><span class="zh">改造前</span></figcaption></figure>
