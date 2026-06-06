@@ -169,6 +169,11 @@
     .faq-a-inner { padding: 0 24px 20px; color: var(--muted); font-size: 15px; line-height: 1.75; }
     .faq-item.open .faq-a { max-height: 300px; }
 
+    /* ---------- service extra media strip ---------- */
+    .service-extra { position: relative; margin: 16px -24px -30px; border-radius: 0 0 14px 14px; overflow: hidden; }
+    .service-extra video { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .service-extra-label { position: absolute; bottom: 8px; left: 12px; background: rgba(33,40,46,0.72); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 999px; backdrop-filter: blur(4px); }
+
     /* ---------- why us ---------- */
     .why-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
     .why-list { display: grid; gap: 18px; margin-top: 28px; }
@@ -429,7 +434,7 @@
           <article class="service reveal">
             <div class="service-media">
               <video autoplay muted loop playsinline>
-                <source src="./assets/video-bathroom.mp4" type="video/mp4">
+                <source src="./assets/video-bathroom2.mp4" type="video/mp4">
               </video>
             </div>
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 12h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4z"/><path d="M7 12V7a2 2 0 012-2 2 2 0 012 2"/></svg></span>
@@ -452,6 +457,10 @@
             <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></span>
             <h3 data-zh><span class="en">Basements &amp; Rental Units</span><span class="zh">地下室与出租单元</span></h3>
             <p data-zh><span class="en">Partitions, doors, stairs, laundry rooms, and full kitchen/bathroom builds for legal-ready rental conversions.</span><span class="zh">隔墙、门、楼梯、洗衣房,以及厨房与卫生间基础改造,按房屋条件推进出租单元。</span></p>
+            <div class="service-extra">
+              <video autoplay muted loop playsinline><source src="./assets/video-falls-basement.mp4" type="video/mp4"></video>
+              <span class="service-extra-label" data-zh><span class="en">Another project</span><span class="zh">另一个案例</span></span>
+            </div>
           </article>
           <article class="service reveal">
             <div class="service-media"><img src="./assets/project-outdoor-fence.jpg" alt="New cedar fence installation" loading="lazy"></div>
