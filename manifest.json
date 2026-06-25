@@ -1,11 +1,11 @@
 {
-  "name": "JL Master Pro · 记账大师",
-  "short_name": "JL记账",
-  "description": "Voice-powered bookkeeping for contractors and families",
+  "name": "JL HomePro Solution",
+  "short_name": "JL HomePro",
+  "description": "GTA renovation, handyman repairs, bathrooms, kitchens, basements and small jobs.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#CBCBCB",
-  "theme_color": "#CBCBCB",
+  "background_color": "#ffffff",
+  "theme_color": "#ee6a1f",
   "orientation": "portrait",
   "icons": [
     {
