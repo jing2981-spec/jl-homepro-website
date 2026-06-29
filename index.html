@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JL HomePro Solution | GTA Renovation Group — Build, Platform & Tools</title>
-  <meta name="description" content="JL HomePro Solution — a GTA home-renovation group: our own renovation projects, renovation work for clients, the jlhomeservice.ca contractor-matching platform, and the JL Master Pro bookkeeping tool for renovation trades. Skilled Chinese team, free quote.">
+  <title>JL HomePro Solution | Reliable GTA Renovations — Clear Quotes, Practical Pricing</title>
+  <meta name="description" content="Reliable GTA home renovations with clear written quotes and practical pricing. Bathrooms, basements, kitchens, repairs and pre-sale refreshes across the Greater Toronto Area. Send photos for a quote.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="keywords" content="GTA renovation, Toronto handyman, bathroom renovation Toronto, kitchen renovation GTA, basement renovation, small home repairs, Chinese contractor GTA, JL HomePro Solution">
+  <meta name="keywords" content="GTA renovation, bathroom renovation near me, basement renovation contractor GTA, kitchen renovation Toronto, home renovation contractor GTA, handyman near me, pre-sale home refresh, JL HomePro Solution">
   <meta name="theme-color" content="#ee6a1f">
   <meta name="geo.region" content="CA-ON">
   <meta name="geo.placename" content="Greater Toronto Area">
   <link rel="canonical" href="https://jlhomeservice.online/">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./assets/logo.png">
-  <meta property="og:title" content="JL HomePro Solution | GTA Renovation Group">
-  <meta property="og:description" content="A GTA renovation group: our own projects, renovation work for clients, the jlhomeservice.ca matching platform, and the JL Master Pro bookkeeping tool for trades.">
+  <meta property="og:title" content="JL HomePro Solution | Reliable GTA Renovations">
+  <meta property="og:description" content="Bathrooms, basements, kitchens, repairs and pre-sale refreshes across the GTA. Clear written quotes, practical pricing, clean work. Send photos for a quote.">
   <meta property="og:image" content="https://jlhomeservice.online/assets/bathroom-after.jpg">
   <meta property="og:url" content="https://jlhomeservice.online/">
   <meta property="og:site_name" content="JL HomePro Solution">
@@ -22,8 +22,8 @@
   <meta property="og:locale:alternate" content="zh_CN">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="JL HomePro Solution | GTA Renovation & Small Jobs">
-  <meta name="twitter:description" content="Small repairs, bathrooms, basements, decks and full renovations across the GTA. Free quote.">
+  <meta name="twitter:title" content="JL HomePro Solution | Reliable GTA Renovations">
+  <meta name="twitter:description" content="Bathrooms, basements, kitchens, repairs and pre-sale refreshes across the GTA. Clear quotes, practical pricing. Send photos for a quote.">
   <meta name="twitter:image" content="https://jlhomeservice.online/assets/bathroom-after.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -201,6 +201,7 @@
     .hero-proof { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
     .proof-chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-size: 13px; font-weight: 600; color: var(--ink-soft); box-shadow: var(--shadow-sm); }
     .proof-chip svg { width: 15px; height: 15px; stroke: var(--orange); fill: none; stroke-width: 2.6; }
+    .trust-strip { margin: 22px 0 0; color: var(--muted); font-size: 13.5px; font-weight: 600; letter-spacing: 0.01em; }
 
     /* ---------- sections ---------- */
     .section { position: relative; padding: 92px 0; }
@@ -332,6 +333,14 @@
     .step h3 { font-family: var(--display); font-weight: 700; margin: 0 0 7px; font-size: 17px; color: var(--ink); }
     .step p { margin: 0; color: var(--muted); font-size: 14px; }
 
+    /* ---------- how our quote works (3 steps) ---------- */
+    .quote-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .qstep { padding: 30px 26px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); text-align: left; transition: transform 200ms ease, box-shadow 200ms ease; }
+    .qstep:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+    .qstep .qn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: var(--orange-soft); font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--orange-dark); }
+    .qstep h3 { font-family: var(--display); font-weight: 700; margin: 16px 0 8px; font-size: 20px; letter-spacing: -0.01em; }
+    .qstep p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+
     /* ---------- service area ---------- */
     .area-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
     .area-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: 14px; font-weight: 600; }
@@ -443,7 +452,7 @@
       .section { padding: 64px 0; }
       .section-head { display: block; }
       .section-head p { margin-top: 14px; }
-      .services, .steps, .biz-grid { grid-template-columns: 1fr; }
+      .services, .steps, .biz-grid, .quote-steps { grid-template-columns: 1fr; }
       .grid2 { grid-template-columns: 1fr; }
       .case-card img { height: 280px; }
       .before-after { grid-template-columns: 1fr; }
@@ -491,18 +500,18 @@
       <div class="hero-inner">
         <span class="eyebrow reveal" style="--d:0ms"><span class="dot"></span><span data-zh><span class="en">Now booking across the GTA</span><span class="zh">大多地区现已接单</span></span></span>
         <h1 class="reveal" style="--d:90ms" data-zh>
-          <span class="en">Affordable prices.<br><span class="accent">High-quality service.</span></span>
-          <span class="zh">可负担的价格,<br><span class="accent">高质量的服务。</span></span>
+          <span class="en">Reliable GTA renovations.<br><span class="accent">Clear quotes, practical pricing.</span></span>
+          <span class="zh">可靠的大多装修,<br><span class="accent">报价清晰,价格实在。</span></span>
         </h1>
         <p class="hero-copy reveal" style="--d:180ms" data-zh>
-          <span class="en">A GTA renovation group: we run our own renovation projects, take on renovation work for clients, and build the jlhomeservice.ca matching platform and the JL Master Pro bookkeeping tool for trades. 10+ years hands-on, high-quality service at prices you can afford.</span>
-          <span class="zh">一家立足大多伦多的装修生态公司:我们自营房屋翻新项目,对外承接装修施工,同时打造 jlhomeservice.ca 装修撮合平台与装修师傅专用的「记账大师」工具。十年以上实战经验,用可负担的价格提供高质量服务。</span>
+          <span class="en">From bathrooms and basements to kitchens, repairs and pre-sale refreshes, JL HomePro Solution helps GTA homeowners plan the right scope, choose practical materials, and get clean work done — with a clear written quote.</span>
+          <span class="zh">从卫生间、地下室到厨房、维修和售前焕新,JL HomePro Solution 帮助大多伦多业主理清装修范围、选用实用材料,把活做干净——并提供清晰的书面报价。</span>
         </p>
         <div class="hero-actions reveal" style="--d:260ms">
-          <a class="btn primary" href="#contact" data-zh><span class="en">Get a Free On-Site Quote</span><span class="zh">预约免费上门报价</span></a>
+          <a class="btn primary" href="#contact" data-zh><span class="en">Get a Practical Quote</span><span class="zh">获取实在报价</span></a>
           <a class="btn wa" href="https://wa.me/16479799301" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.821 9.821 0 001.51 5.26l-.999 3.648 3.488-.915zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            <span data-zh><span class="en">Chat on WhatsApp</span><span class="zh">WhatsApp 联系</span></span>
+            <span data-zh><span class="en">Send Photos on WhatsApp</span><span class="zh">发照片到 WhatsApp</span></span>
           </a>
         </div>
         <div class="hero-proof reveal" style="--d:340ms">
@@ -510,6 +519,37 @@
           <span class="proof-chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-zh><span class="en">10+ years hands-on experience</span><span class="zh">十年以上施工经验</span></span></span>
           <span class="proof-chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-zh><span class="en">Written scope &amp; pricing</span><span class="zh">书面范围与报价</span></span></span>
           <span class="proof-chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-zh><span class="en">Small jobs welcome</span><span class="zh">小活也欢迎</span></span></span>
+        </div>
+        <p class="trust-strip reveal" style="--d:400ms" data-zh><span class="en">Bathroom · Basement · Kitchen · Repairs · Pre-Sale Refresh &nbsp;|&nbsp; Serving homeowners across the GTA</span><span class="zh">卫生间 · 地下室 · 厨房 · 维修 · 售前焕新 &nbsp;|&nbsp; 服务整个大多伦多地区的业主</span></p>
+      </div>
+    </section>
+
+    <!-- HOW OUR QUOTE WORKS -->
+    <section class="section" id="how-it-works">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">How Our Quote Works</span>
+            <h2 data-zh><span class="en">A clear quote in three simple steps.</span><span class="zh">三步,给你一个清晰的报价。</span></h2>
+          </div>
+          <p data-zh><span class="en">No guesswork, no pressure. We scope the work properly and put the price in writing before anything starts.</span><span class="zh">不靠猜、不催单。开工前我们把范围理清楚,并把价格写成书面报价。</span></p>
+        </div>
+        <div class="quote-steps">
+          <article class="qstep reveal">
+            <span class="qn">1</span>
+            <h3 data-zh><span class="en">Send photos</span><span class="zh">发来照片</span></h3>
+            <p data-zh><span class="en">Message us photos of the space on WhatsApp, or book an on-site visit. Tell us what you'd like done.</span><span class="zh">用 WhatsApp 把空间照片发给我们,或预约上门看现场,说明你想做什么。</span></p>
+          </article>
+          <article class="qstep reveal">
+            <span class="qn">2</span>
+            <h3 data-zh><span class="en">Clear written scope</span><span class="zh">清晰的书面范围</span></h3>
+            <p data-zh><span class="en">We confirm exactly what's included, suggest practical materials, and set realistic priorities and timing.</span><span class="zh">我们确认具体包含哪些项目,建议实用材料,并排好务实的优先级与工期。</span></p>
+          </article>
+          <article class="qstep reveal">
+            <span class="qn">3</span>
+            <h3 data-zh><span class="en">Practical fixed price</span><span class="zh">实在的固定报价</span></h3>
+            <p data-zh><span class="en">You get a written quote with practical pricing — no surprises. Approve it and we get to work, clean and on schedule.</span><span class="zh">你拿到一份价格实在的书面报价——没有意外加价。确认后我们就开工,干净、守时。</span></p>
+          </article>
         </div>
       </div>
     </section>
@@ -697,7 +737,7 @@
             <div class="why-list">
               <div class="why-item">
                 <span class="num">01</span>
-                <div><h4 data-zh><span class="en">10+ years of hands-on renovation experience</span><span class="zh">十年以上一线施工经验</span></h4><p data-zh><span class="en">Our skilled Chinese crew has worked through real homes, real repairs and real renovation details — from small installs to full-room upgrades.</span><span class="zh">技艺精湛的华人施工团队,十年以上一线经验,从小安装、小维修到整间翻新,细节和现场问题都处理得来。</span></p></div>
+                <div><h4 data-zh><span class="en">10+ years of hands-on renovation experience</span><span class="zh">十年以上一线施工经验</span></h4><p data-zh><span class="en">Our skilled crew has worked through real homes, real repairs and real renovation details — from small installs to full-room upgrades.</span><span class="zh">技艺精湛的华人施工团队,十年以上一线经验,从小安装、小维修到整间翻新,细节和现场问题都处理得来。</span></p></div>
               </div>
               <div class="why-item">
                 <span class="num">02</span>
@@ -911,6 +951,49 @@
               <label for="project" data-zh><span class="en">Project Type</span><span class="zh">项目类型</span></label>
               <select id="project" name="project"></select>
             </div>
+            <div class="field">
+              <label for="budget" data-zh><span class="en">Budget Range</span><span class="zh">预算范围</span></label>
+              <select id="budget" name="budget">
+                <option value="">—</option>
+                <option>Under $5,000</option>
+                <option>$5,000 – $15,000</option>
+                <option>$15,000 – $40,000</option>
+                <option>$40,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timeline" data-zh><span class="en">Timeline</span><span class="zh">期望工期</span></label>
+              <select id="timeline" name="timeline">
+                <option value="">—</option>
+                <option>ASAP</option>
+                <option>1 – 3 months</option>
+                <option>Just planning</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="property" data-zh><span class="en">Property Type</span><span class="zh">房屋类型</span></label>
+              <select id="property" name="property">
+                <option value="">—</option>
+                <option>Detached</option>
+                <option>Semi-detached</option>
+                <option>Townhouse</option>
+                <option>Condo / Apartment</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="source" data-zh><span class="en">How did you hear about us?</span><span class="zh">从哪里了解到我们?</span></label>
+              <select id="source" name="source">
+                <option value="">—</option>
+                <option>Google</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>Nextdoor</option>
+                <option>Referral</option>
+                <option>Other</option>
+              </select>
+            </div>
             <div class="field full">
               <label for="message" data-zh><span class="en">Project Details</span><span class="zh">项目说明</span></label>
               <textarea id="message" name="message" data-ph-en="Example: replace toilet, install vanity, add pot lights, patch wall holes, or renovate bathroom." data-ph-zh="例如:更换马桶、安装洗手盆/浴室柜、加筒灯、补墙洞,或翻新卫生间。"></textarea>
@@ -1045,10 +1128,22 @@
           var pub = db.storage.from('lead-photos').getPublicUrl(path);
           urls.push(pub.data.publicUrl);
         }
-        // 2) insert lead row
+        // 2) compose extra qualifiers + UTM attribution into the message
+        //    (kept inside `message` so no Supabase schema change is required yet)
+        var extras = [];
+        if (fd.get('budget'))   extras.push('Budget: ' + fd.get('budget'));
+        if (fd.get('timeline')) extras.push('Timeline: ' + fd.get('timeline'));
+        if (fd.get('property')) extras.push('Property: ' + fd.get('property'));
+        if (fd.get('source'))   extras.push('Heard via: ' + fd.get('source'));
+        var utm = new URLSearchParams(location.search);
+        ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+          if (utm.get(k)) extras.push(k + '=' + utm.get(k));
+        });
+        var composedMsg = (extras.length ? '[' + extras.join(' | ') + ']\n' : '') + (fd.get('message') || '');
+        // 3) insert lead row
         var ins = await db.from('leads').insert({
           name: fd.get('name'), phone: fd.get('phone'), email: fd.get('email'),
-          city: fd.get('city'), project_type: fd.get('project'), message: fd.get('message'),
+          city: fd.get('city'), project_type: fd.get('project'), message: composedMsg,
           photo_urls: urls, lang: document.documentElement.lang
         });
         if (ins.error) throw ins.error;
