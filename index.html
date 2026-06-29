@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JL HomePro Solution | Renovation & Small Jobs Across the GTA</title>
-  <meta name="description" content="JL HomePro Solution — GTA home renovation and small on-site jobs, from kitchens and bathrooms to toilet replacement, vanities, pot lights and wall repairs. Skilled Chinese team, affordable high-quality service, free quote.">
+  <title>JL HomePro Solution | GTA Renovation Group — Build, Platform & Tools</title>
+  <meta name="description" content="JL HomePro Solution — a GTA home-renovation group: our own renovation projects, renovation work for clients, the jlhomeservice.ca contractor-matching platform, and the JL Master Pro bookkeeping tool for renovation trades. Skilled Chinese team, free quote.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="keywords" content="GTA renovation, Toronto handyman, bathroom renovation Toronto, kitchen renovation GTA, basement renovation, small home repairs, Chinese contractor GTA, JL HomePro Solution">
   <meta name="theme-color" content="#ee6a1f">
@@ -13,8 +13,8 @@
   <link rel="canonical" href="https://jlhomeservice.online/">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./assets/logo.png">
-  <meta property="og:title" content="JL HomePro Solution | GTA Renovation & Small Jobs">
-  <meta property="og:description" content="Home renovation and small on-site repair jobs across the GTA. Skilled Chinese crew, affordable high-quality service, free quote.">
+  <meta property="og:title" content="JL HomePro Solution | GTA Renovation Group">
+  <meta property="og:description" content="A GTA renovation group: our own projects, renovation work for clients, the jlhomeservice.ca matching platform, and the JL Master Pro bookkeeping tool for trades.">
   <meta property="og:image" content="https://jlhomeservice.online/assets/bathroom-after.jpg">
   <meta property="og:url" content="https://jlhomeservice.online/">
   <meta property="og:site_name" content="JL HomePro Solution">
@@ -242,6 +242,28 @@
     .service.featured .service-content p { grid-column: 2; }
     .service.featured .ico { grid-row: 1 / 3; }
 
+    /* ---------- business / ecosystem ---------- */
+    .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .biz-card { position: relative; display: flex; flex-direction: column; padding: 30px 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); text-align: left; transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; }
+    .biz-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: transparent; }
+    .biz-card .ico { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: var(--orange-soft); margin: 0 0 18px; }
+    .biz-card .ico svg { width: 26px; height: 26px; stroke: var(--orange); fill: none; stroke-width: 2; }
+    .biz-head { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; flex-wrap: wrap; }
+    .biz-card h3 { font-family: var(--display); font-weight: 700; margin: 0; font-size: 21px; letter-spacing: -0.01em; }
+    .biz-card > p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.65; }
+    .biz-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 0.03em; }
+    .biz-badge.own { background: var(--orange); color: #fff; }
+    .biz-badge.live { background: var(--gg-soft); color: var(--gg); }
+    .biz-badge.soon { background: var(--soft); color: var(--muted); }
+    .biz-foot { margin-top: auto; padding-top: 20px; display: flex; align-items: center; gap: 16px; }
+    .biz-link { display: inline-flex; align-items: center; gap: 7px; font-weight: 800; font-size: 14px; color: var(--orange-dark); }
+    .biz-link svg { width: 15px; height: 15px; stroke: var(--orange); fill: none; stroke-width: 2.4; transition: transform 160ms ease; }
+    .biz-link:hover svg { transform: translateX(3px); }
+    .biz-qr { display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 20px; }
+    .biz-qr img { width: 92px; height: 92px; border-radius: 10px; border: 1px solid var(--line); background: #fff; padding: 5px; flex-shrink: 0; }
+    .biz-qr .biz-qr-text { display: grid; gap: 6px; }
+    .biz-qr .biz-qr-text span { color: var(--muted); font-size: 13px; line-height: 1.5; }
+
     /* ---------- faq ---------- */
     .faq-list { display: grid; gap: 10px; max-width: 820px; margin: 0 auto; }
     .faq-item { border: 1px solid var(--line); border-radius: 14px; background: var(--paper); overflow: hidden; }
@@ -415,7 +437,7 @@
       .section { padding: 64px 0; }
       .section-head { display: block; }
       .section-head p { margin-top: 14px; }
-      .services, .steps { grid-template-columns: 1fr; }
+      .services, .steps, .biz-grid { grid-template-columns: 1fr; }
       .grid2 { grid-template-columns: 1fr; }
       .case-card img { height: 280px; }
       .before-after { grid-template-columns: 1fr; }
@@ -435,10 +457,11 @@
         <img src="./assets/logo.png" alt="JL HomePro Solution logo">
         <span class="brand-name">
           <strong>JL HomePro Solution</strong>
-          <span data-zh><span class="en">Renovation & Small Jobs</span><span class="zh">装修与上门小活</span></span>
+          <span data-zh><span class="en">GTA Renovation Group</span><span class="zh">大多伦多装修生态</span></span>
         </span>
       </a>
       <div class="nav-links">
+        <a href="#ecosystem" data-zh><span class="en">What We Do</span><span class="zh">业务</span></a>
         <a href="#services" data-zh><span class="en">Services</span><span class="zh">服务</span></a>
         <a href="#why" data-zh><span class="en">Why Us</span><span class="zh">为什么选我们</span></a>
 
@@ -466,8 +489,8 @@
           <span class="zh">可负担的价格,<br><span class="accent">高质量的服务。</span></span>
         </h1>
         <p class="hero-copy reveal" style="--d:180ms" data-zh>
-          <span class="en">Small repairs, bathrooms, basements, decks and full renovations. 10+ years of experience. High-quality service at prices you can afford.</span>
-          <span class="zh">小修小补、卫生间、地下室、露台和整屋翻新都能做。十年以上经验的华人施工团队,用可负担得起的价格,为你提供高质量的服务。</span>
+          <span class="en">A GTA renovation group: we run our own renovation projects, take on renovation work for clients, and build the jlhomeservice.ca matching platform and the JL Master Pro bookkeeping tool for trades. 10+ years hands-on, high-quality service at prices you can afford.</span>
+          <span class="zh">一家立足大多伦多的装修生态公司:我们自营房屋翻新项目,对外承接装修施工,同时打造 jlhomeservice.ca 装修撮合平台与装修师傅专用的「记账大师」工具。十年以上实战经验,用可负担的价格提供高质量服务。</span>
         </p>
         <div class="hero-actions reveal" style="--d:260ms">
           <a class="btn primary" href="#contact" data-zh><span class="en">Get a Free On-Site Quote</span><span class="zh">预约免费上门报价</span></a>
@@ -481,6 +504,82 @@
           <span class="proof-chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-zh><span class="en">10+ years hands-on experience</span><span class="zh">十年以上施工经验</span></span></span>
           <span class="proof-chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-zh><span class="en">Written scope &amp; pricing</span><span class="zh">书面范围与报价</span></span></span>
           <span class="proof-chip"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span data-zh><span class="en">Small jobs welcome</span><span class="zh">小活也欢迎</span></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM / WHAT WE DO -->
+    <section class="section alt" id="ecosystem">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">What We Do</span>
+            <h2 data-zh><span class="en">One company, four ways we build.</span><span class="zh">一家公司,四块业务。</span></h2>
+          </div>
+          <p data-zh><span class="en">From our own renovation projects to client work, an online matching platform, and a bookkeeping tool built for renovation trades.</span><span class="zh">从自营翻新项目,到对外承接施工,再到线上撮合平台与为装修师傅打造的记账工具。</span></p>
+        </div>
+        <div class="biz-grid">
+
+          <!-- 1. In-house renovation projects -->
+          <article class="biz-card reveal">
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+            <div class="biz-head">
+              <h3 data-zh><span class="en">In-House Renovation Projects</span><span class="zh">自营房屋翻新</span></h3>
+              <span class="biz-badge own" data-zh><span class="en">OUR OWN</span><span class="zh">自营</span></span>
+            </div>
+            <p data-zh><span class="en">We've successfully completed many home renovations of our own — buying, renovating and improving properties hands-on. Our next project is at 560 Stone Church Rd E, Hamilton. Every client project is backed by that real, hands-on experience.</span><span class="zh">我们已经成功完成了许多自营房屋翻新——亲手购入、改造、提升房产价值。下一个项目位于 Hamilton 的 560 Stone Church Rd E。为客户施工时,靠的正是这些真刀真枪积累的实战经验。</span></p>
+            <div class="biz-foot">
+              <a class="biz-link" href="#services" data-zh><span class="en">See our work</span><span class="zh">查看翻新实例</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+
+          <!-- 2. Renovation for clients -->
+          <article class="biz-card reveal">
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6a1.5 1.5 0 002 2l6-6a4 4 0 005.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></span>
+            <div class="biz-head">
+              <h3 data-zh><span class="en">Renovation for Clients</span><span class="zh">对外承接施工</span></h3>
+            </div>
+            <p data-zh><span class="en">Small repairs to full renovations across the GTA — kitchens, bathrooms, basements, decks and whole-home work, with a clear written scope and price.</span><span class="zh">大多地区小修小补到整屋翻新都接:厨房、卫生间、地下室、露台与全屋翻新,开工前给出清楚的书面范围与报价。</span></p>
+            <div class="biz-foot">
+              <a class="biz-link" href="#services" data-zh><span class="en">View services</span><span class="zh">查看服务项目</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="biz-link" href="#contact" data-zh><span class="en">Free quote</span><span class="zh">免费报价</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
+
+          <!-- 3. jlhomeservice.ca matching platform -->
+          <article class="biz-card reveal">
+            <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
+            <div class="biz-head">
+              <h3 data-zh><span class="en">jlhomeservice.ca Platform</span><span class="zh">jlhomeservice.ca 撮合平台</span></h3>
+              <span class="biz-badge live" data-zh><span class="en">LIVE</span><span class="zh">已上线</span></span>
+            </div>
+            <p data-zh><span class="en">An online platform connecting GTA homeowners with vetted renovation pros: post a job for free, get fair pricing, and let certified tradespeople take it on.</span><span class="zh">连接大多房主与认证师傅的线上平台:免费发单、公平定价,由认证装修师傅接单。</span></p>
+            <div class="biz-qr">
+              <img src="./assets/platform-qr.png" alt="jlhomeservice.ca platform QR code">
+              <div class="biz-qr-text">
+                <a class="biz-link" href="https://jlhomeservice.ca" target="_blank" rel="noopener" data-zh><span class="en">Visit platform</span><span class="zh">访问平台</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                <span data-zh><span class="en">Or scan the QR code to view.</span><span class="zh">或扫码查看。</span></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. JL Master Pro bookkeeping tool -->
+          <article class="biz-card reveal">
+            <span class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 18h4"/></svg></span>
+            <div class="biz-head">
+              <h3 data-zh><span class="en">JL Master Pro</span><span class="zh">记账大师 JL Master Pro</span></h3>
+              <span class="biz-badge live" data-zh><span class="en">WEB LIVE</span><span class="zh">网页版已上线</span></span>
+            </div>
+            <p data-zh><span class="en">A bookkeeping tool built for renovation tradespeople — track jobs, workers and expenses by voice. The web version is live now.</span><span class="zh">为装修师傅打造的记账工具:语音记录工地、工人与开支。网页版现已上线。</span></p>
+            <div class="biz-qr">
+              <img src="./assets/masterpro-qr.png" alt="JL Master Pro web version QR code">
+              <div class="biz-qr-text">
+                <a class="biz-link" href="https://www.jlhomeservice.site" target="_blank" rel="noopener" data-zh><span class="en">Open web version</span><span class="zh">打开网页版</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+                <span data-zh><span class="en">Or scan the QR code to sign in on your phone.</span><span class="zh">或用手机扫码登录使用。</span></span>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -837,6 +936,11 @@
           <span class="en">Registered business name in Ontario · BIN 1001500057 · Sole Proprietor: Jing Li<br>Effective Feb 10, 2026 · Expiry Feb 09, 2031</span>
           <span class="zh">安省注册商号 · BIN 1001500057 · 负责人:Jing Li<br>有效期:2026年2月10日 至 2031年2月9日</span>
         </p>
+      </div>
+      <div class="footer-reg">
+        <strong data-zh><span class="en">Our Platforms</span><span class="zh">旗下产品</span></strong><br>
+        <a href="https://jlhomeservice.ca" target="_blank" rel="noopener" data-zh><span class="en">jlhomeservice.ca — Matching Platform</span><span class="zh">jlhomeservice.ca · 撮合平台</span></a><br>
+        <a href="https://www.jlhomeservice.site" target="_blank" rel="noopener" data-zh><span class="en">JL Master Pro — Bookkeeping Tool</span><span class="zh">记账大师 · 装修师傅工具</span></a>
       </div>
       <div class="footer-reg">
         <a href="tel:+16479799301">+1 (647) 979-9301</a><br>
