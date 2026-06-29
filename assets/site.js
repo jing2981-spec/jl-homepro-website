@@ -13,9 +13,11 @@
     try { localStorage.setItem('jl_lang', lang); } catch (e) {}
   }
 
+  // URL ?lang= wins (trade-partner links land in Chinese); else saved; else English
+  var urlLang = new URLSearchParams(location.search).get('lang');
   var saved = 'en';
   try { saved = localStorage.getItem('jl_lang') || 'en'; } catch (e) {}
-  setLang(saved);
+  setLang(urlLang === 'zh' ? 'zh' : (urlLang === 'en' ? 'en' : saved));
 
   if (enBtn) enBtn.addEventListener('click', function () { setLang('en'); });
   if (zhBtn) zhBtn.addEventListener('click', function () { setLang('zh'); });

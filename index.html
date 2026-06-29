@@ -1117,7 +1117,9 @@
     }
     enBtn.addEventListener('click', function(){ setLang('en'); });
     zhBtn.addEventListener('click', function(){ setLang('zh'); });
-    setLang('en');
+    // honour ?lang=zh / ?lang=en (e.g. trade-partner links land in Chinese); default English
+    var urlLang = new URLSearchParams(location.search).get('lang');
+    setLang(urlLang === 'zh' ? 'zh' : (urlLang === 'en' ? 'en' : 'en'));
 
     var photos = document.getElementById('photos');
     var fileList = document.getElementById('fileList');
