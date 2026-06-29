@@ -341,6 +341,14 @@
     .qstep h3 { font-family: var(--display); font-weight: 700; margin: 16px 0 8px; font-size: 20px; letter-spacing: -0.01em; }
     .qstep p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
 
+    /* ---------- reviews ---------- */
+    .reviews-note { max-width: 760px; margin: 0 auto; text-align: center; padding: 38px 32px; border: 1px dashed var(--gg-line); border-radius: 18px; background: var(--gg-soft); }
+    .reviews-note .gicon { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; background: var(--paper); border: 1px solid var(--gg-line); margin-bottom: 16px; }
+    .reviews-note .gicon svg { width: 26px; height: 26px; }
+    .reviews-note p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+    .reviews-note .reviews-cta { margin-top: 16px; font-weight: 700; color: var(--ink); font-size: 14.5px; }
+    .reviews-note .reviews-cta a { color: var(--orange-dark); }
+
     /* ---------- service area ---------- */
     .area-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
     .area-chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: 14px; font-weight: 600; }
@@ -889,8 +897,26 @@
       </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="kicker">Reviews</span>
+            <h2 data-zh><span class="en">Building trust with GTA homeowners, one project at a time.</span><span class="zh">用一个个项目,赢得大多业主的信任。</span></h2>
+          </div>
+          <p data-zh><span class="en">We're actively collecting real feedback from homeowners after completed projects. As new Google reviews come in, this section will highlight verified customer experiences and what homeowners valued most about the process.</span><span class="zh">每个项目完工后,我们都在持续收集真实的业主反馈。随着新的 Google 评价陆续到来,这里会展示经过验证的客户体验,以及业主最看重的环节。</span></p>
+        </div>
+        <div class="reviews-note reveal">
+          <span class="gicon"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38z"/></svg></span>
+          <p data-zh><span class="en">Real customer reviews are coming soon. For now, browse our project photos, see how our quote process works, and contact us with your renovation details — we're happy to explain the scope before you decide.</span><span class="zh">真实客户评价即将上线。现在你可以先浏览我们的项目照片、了解我们的报价流程,并把你的装修需求发给我们——开工前我们很乐意先把范围讲清楚。</span></p>
+          <p class="reviews-cta" data-zh><span class="en">Worked with JL HomePro Solution? Your honest review helps local homeowners find a renovation team they can trust — <a href="https://wa.me/16479799301" target="_blank" rel="noopener">share your experience</a>.</span><span class="zh">和 JL HomePro Solution 合作过?你的真实评价能帮助更多本地业主找到值得信任的装修团队——<a href="https://wa.me/16479799301" target="_blank" rel="noopener">分享你的体验</a>。</span></p>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
-    <section class="section" id="contact">
+    <section class="section alt" id="contact">
       <div class="wrap contact">
         <aside class="contact-panel reveal">
           <span class="kicker">Contact</span>
