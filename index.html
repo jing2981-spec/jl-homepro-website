@@ -245,6 +245,7 @@
 
     /* ---------- business / ecosystem ---------- */
     .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .biz-grid > .biz-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .biz-card { position: relative; display: flex; flex-direction: column; padding: 30px 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); text-align: left; transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; }
     .biz-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: transparent; }
     .biz-card .ico { display: inline-flex; align-items: center; justify-content: center; width: 62px; height: 62px; border-radius: 16px; background: var(--orange-soft); margin: 0 0 18px; }
@@ -675,37 +676,6 @@
             </div>
           </article>
 
-          <!-- 4. JL Master Pro bookkeeping tool -->
-          <article class="biz-card reveal">
-            <span class="ico brand"><img src="./assets/masterpro-logo.png" alt="JL Master Pro logo"></span>
-            <div class="biz-head">
-              <h3 data-zh><span class="en">JL Master Pro</span><span class="zh">记账大师 · 装修人的 AI 记账神器</span></h3>
-            </div>
-            <div class="ms-body" data-zh>
-              <div class="en ms-en">JL Master Pro — voice bookkeeping for contractors. Tap and speak: "paid 565 for drywall" or "received $3000 from Dunn St" and the entry is logged for review. Track job-site contracts, costs, payments, HST amounts, and profit margin in one place. Built for the trades. Bilingual.</div>
-              <div class="zh ms-zh">
-                <p class="ms-lead">还在用记事本、Excel 记工地账?记账大师让你开口说话就能记账:</p>
-                <ul class="biz-features">
-                  <li>🎤 <strong>AI 语音记账</strong>:说一句就入账,识别快、可修改,免打字</li>
-                  <li>🏗 <strong>工地管理</strong>:每个工地的合同额、已用成本、已收款、尾款、毛利率全都算好</li>
-                  <li>👷 <strong>记工餐补</strong>:工资、餐补、按天结,一句话记到对应工地</li>
-                  <li>🧾 <strong>小票扫描</strong>:拍照按日期归档,后面核对更方便</li>
-                  <li>💰 <strong>HST 金额分开看</strong>:账目整理更清楚</li>
-                  <li>🌐 <strong>中英双语</strong>,承包商 / 家庭两种模式</li>
-                  <li>☁️ <strong>云端同步</strong>,换手机数据不丢</li>
-                </ul>
-                <p class="ms-close">专为大多伦多装修行业打造。灰板、记工、餐补、工程款这些装修话,说一句就能记进账里。</p>
-              </div>
-            </div>
-            <div class="biz-qr">
-              <img src="./assets/masterpro-qr.png" alt="JL Master Pro web version QR code">
-              <div class="biz-qr-text">
-                <a class="biz-link" href="https://www.jlhomeservice.site" target="_blank" rel="noopener" data-zh><span class="en">Open web version</span><span class="zh">打开网页版</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-                <span data-zh><span class="en">Or scan the QR code to sign in on your phone.</span><span class="zh">或用手机扫码登录使用。</span></span>
-              </div>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
@@ -953,8 +923,7 @@
       </div>
       <div class="footer-reg">
         <strong data-zh><span class="en">Our Platforms</span><span class="zh">旗下产品</span></strong><br>
-        <a href="https://jlhomeservice.ca" target="_blank" rel="noopener" data-zh><span class="en">jlhomeservice.ca — Matching Platform</span><span class="zh">jlhomeservice.ca · 撮合平台</span></a><br>
-        <a href="https://www.jlhomeservice.site" target="_blank" rel="noopener" data-zh><span class="en">JL Master Pro — Bookkeeping Tool</span><span class="zh">记账大师 · 装修师傅工具</span></a>
+        <a href="https://jlhomeservice.ca" target="_blank" rel="noopener" data-zh><span class="en">jlhomeservice.ca — Matching Platform</span><span class="zh">jlhomeservice.ca · 撮合平台</span></a>
       </div>
       <div class="footer-reg">
         <a href="tel:+16479799301">+1 (647) 979-9301</a><br>
